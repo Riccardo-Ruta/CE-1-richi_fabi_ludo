@@ -1,7 +1,2 @@
 library(readr)
-view_election <- read_csv("data/original data/view_election.csv")
-
-
-
-
-#try
+view_election <- read_csv("data/original_data/view_election.csv")
