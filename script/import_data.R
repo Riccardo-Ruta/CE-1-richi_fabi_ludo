@@ -39,7 +39,7 @@ election03 %>%
   filter(country_name == "Italy") %>%
   ggplot(election03, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
   geom_bar(stat = "identity", position = "dodge", col = "black") + 
-  scale_fill_manual(values = c("gray20", "gray50", "gray80"), 
+  scale_fill_manual(values = c("green", "red", "blue"), 
                     "Political position") +
   scale_y_continuous(labels = scales::percent) +
   ylab("Share vote") +
@@ -49,5 +49,17 @@ election03 %>%
 
 
 
+#prova grafivo n.2
 
-
+election03 %>%
+  filter(country_name == "Italy") %>%
+  ggplot(election03, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
+  geom_bar(stat = "identity", width = 500, size = 10, position = "stack") + 
+  scale_fill_manual(values = c("green", "red", "blue"), 
+                    "Political position") +
+  scale_y_continuous(labels = scales::percent) +
+  ylab("Share vote") +
+  xlab("year") +
+  theme_bw() +
+  theme(legend.position = "bottom")
+*
