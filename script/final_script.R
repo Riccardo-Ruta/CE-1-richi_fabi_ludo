@@ -38,6 +38,12 @@ view(election03)
 election04 <- filter(election03,
                      election_date > "1961-12-09")
 
+#Correlation vote_shareXpolitical_pos
+ggplot(election04, aes(x=left_right, y=vote_share)) +
+  geom_point() +
+  facet_wrap(~country_name, ncol=5) +
+  theme_bw()
+
 
 #Graph bar election_dateXvote_shareXpolitical_pos for each country
 ggplot(election04, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
@@ -49,5 +55,6 @@ ylab("Percentage of share vote") +
 xlab("year") +
 theme_bw() +
 theme(legend.position = "bottom")
+
 
 
