@@ -45,3 +45,18 @@ election03 %>%
   xlab("year") +
   theme_bw() +
   theme(legend.position = "bottom")
+
+#prova grafico 2 che funziona
+
+election03 %>%
+  filter(country_name == "Italy") %>%
+  ggplot(election03, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
+  geom_bar(stat = "identity", width = 500, size = 10, position = "stack") + 
+  scale_fill_manual(values = c("green", "red", "blue"), 
+                    "Political position") +
+  scale_y_continuous(labels = scales::percent) +
+  ylab("Share vote") +
+  xlab("year") +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
