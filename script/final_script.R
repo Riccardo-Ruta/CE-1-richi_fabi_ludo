@@ -56,5 +56,13 @@ xlab("year") +
 theme_bw() +
 theme(legend.position = "bottom")
 
-
+#correlazione con la mean di vote_share
+view_election %>% 
+  group_by(left_right, country_name) %>%
+  summarize(vote_share= mean(vote_share, na.rm=T)) %>%
+  ggplot(., aes(y=vote_share, x=left_right, group=factor(country_name))) +
+  geom_point(aes(col=factor(country_name))) +
+  facet_wrap( ~country_name, scales= "free") +
+  labs(x="Left_right", y="Vote_share", title = "prova") +
+  theme_bw() 
 
