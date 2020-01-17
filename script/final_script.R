@@ -5,7 +5,7 @@ View(view_election)
 
 #Select variables
 library(tidyverse)
-election00 <- select(view_election, country_name, election_date, vote_share, left_right, election_type)
+election00 <- select(view_election, country_name, election_date, vote_share, left_right, election_type, party_name)
 view(election00)
 
 #Filter variable country and variable election_type
@@ -38,12 +38,6 @@ view(election03)
 election04 <- filter(election03,
                      election_date > "1961-12-09")
 
-#Correlation vote_shareXpolitical_pos
-ggplot(election04, aes(x=left_right, y=vote_share)) +
-  geom_point() +
-  facet_wrap(~country_name, ncol=5) +
-  theme_bw()
-
 
 #Graph bar election_dateXvote_shareXpolitical_pos for each country
 ggplot(election04, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
@@ -57,12 +51,24 @@ theme_bw() +
 theme(legend.position = "bottom")
 
 #correlazione con la mean di vote_share
-view_election %>% 
+election04 %>% 
   group_by(left_right, country_name) %>%
-  summarize(vote_share= mean(vote_share, na.rm=T)) %>%
+  summarize(vote_share=mean(vote_share)) %>%
   ggplot(., aes(y=vote_share, x=left_right, group=factor(country_name))) +
   geom_point(aes(col=factor(country_name))) +
-  facet_wrap( ~country_name, scales= "free") +
   labs(x="Left_right", y="Vote_share", title = "prova") +
   theme_bw() 
 
+view(view_election)
+
+#VOTE_SHAREXLEFT_RIGHT: 60's
+election04 %>% 
+  filter(election_date > "1963-04-28", 
+         election_date <= "1969-12-27") %>%
+  group_by(left_right, country_name) %>%
+  ggplot(., aes(y=vote_share, x=left_right, group=factor(country_name))) +
+  geom_point(aes(col=factor(country_name))) +
+  labs(x="Left_right", y="Vote_share", title = "prova") +
+  theme_bw() 
+
+#VOTE_SHARE
