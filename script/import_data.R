@@ -34,3 +34,26 @@ apply(view_election03, 2, function(x) sum(is.na(x)))
 view(view_election03)
 
 
+view_election3 <- mutate(political_pos = factor(political_pos, levels = c ("Left", "Center", "Right")))
+
+
+# Prova grafico Italia da sistemare
+election03 %>%
+  filter(country_name == "Italy") %>%
+  ggplot(election03, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
+  geom_bar(stat = "identity", position = "dodge", col = "black") + 
+  scale_fill_manual(values = c("gray20", "gray50", "gray80"), 
+                    "Political position") +
+  scale_y_continuous(labels = scales::percent) +
+  ylab("Share vote") +
+  xlab("year") +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+
+
+
+
+
+
+
