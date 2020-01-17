@@ -38,16 +38,17 @@ view(election03)
 election03 %>%
   filter(country_name == "Italy") %>%
   ggplot(election03, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
-  geom_bar(stat="identity", size = 5, width =500, position = "stack") + 
-  scale_fill_manual(values = c("grey30", "grey50", "grey80")) +
+  geom_bar(stat="identity", size = 5, width =1200, position = "dodge") + 
+  scale_fill_manual(values = c("yellow", "pink", "red")) +
   scale_y_continuous(labels = scales::percent) +
+  scale_x_continuous(breaks = seq (1940, 2019, by = 20))
   ylab("Share vote") +
   xlab("year") +
   theme_bw() +
   theme(legend.position = "bottom")
 
-#prova grafico 2 che funziona
 
+#prova grafico 2 che funziona
 election03 %>%
   filter(country_name == "Italy") %>%
   ggplot(election03, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
