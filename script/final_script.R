@@ -5,7 +5,7 @@ View(view_election)
 
 #Select variables
 library(tidyverse)
-election00 <- select(view_election, country_name, election_date, vote_share, left_right, election_type)
+election00 <- select(view_election, country_name, election_date, vote_share, left_right, election_type, party_name)
 view(election00)
 
 #Filter variable country and variable election_type
@@ -57,7 +57,7 @@ theme_bw() +
 theme(legend.position = "bottom")
 
 #correlazione con la mean di vote_share
-view_election %>% 
+election04 %>% 
   group_by(left_right, country_name) %>%
   summarize(vote_share= mean(vote_share, na.rm=T)) %>%
   ggplot(., aes(y=vote_share, x=left_right, group=factor(country_name))) +
