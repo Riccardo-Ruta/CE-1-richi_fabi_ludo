@@ -35,9 +35,12 @@ view(election03)
 
 #filter election date 
 election04 <- filter(election03,
-                     election_date == 
-)
+                     election_date > "1961-12-09")
 
+election04$election_date <- as.Date(election04$election_date)
+
+library(lubridate)
+as_date(0)
 
 
 # Prova grafico Italia da sistemare
@@ -68,15 +71,18 @@ election03 %>%
   theme(legend.position = "bottom")
 
 #ALTRO GRAFICO
-election03 %>%
+election04 %>%
   filter(country_name == "Italy") %>%
-  ggplot(election03, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
+  ggplot(election04, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
   geom_bar(stat="identity", size = 5, width =350, position = "dodge") + 
-  scale_fill_manual(values = c("grey30", "grey50", "grey80")) +
+  scale_fill_manual(values = c("red", "grey50", "grey80")) +
   scale_y_continuous() +
+  scale_x_continuous(breaks = seq(1960, 2019, by = 10)) +
   ylab("Percentage of share vote") +
   xlab("year") +
   theme_bw() +
   theme(legend.position = "bottom")
 
+
+??origin
 
