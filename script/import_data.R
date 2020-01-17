@@ -21,8 +21,7 @@ view_election02 <- mutate(
   view_election01, 
   political_pos = ifelse(view_election01$left_right <= 3.3333, "left",
                    ifelse(view_election01$left_right <= 6.6666, "center",
-                          "right"))
-)
+                          "right")))
 view(view_election02)
 
 #drop missing values 
