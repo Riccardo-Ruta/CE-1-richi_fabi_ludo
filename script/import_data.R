@@ -17,13 +17,13 @@ view(election01)
 
 
 #Recode variable political position
-
-view_election02 <- mutate(
-  view_election01, 
-  political_pos = ifelse(view_election01$left_right <= 3.3333, "left",
-                   ifelse(view_election01$left_right <= 6.6666, "center",
-                          "right")))
-view(view_election02)
+election02 <- mutate(
+  election01, 
+  political_pos = ifelse(election01$left_right <= 3.3333, "left",
+                         ifelse(election01$left_right <= 6.6666, "center",
+                                "right"))
+)
+view(election02)
 
 #drop missing values 
 election03 <- na.omit(election02)
@@ -37,15 +37,11 @@ view(election03)
 # Prova grafico Italia da sistemare
 election03 %>%
   filter(country_name == "Italy") %>%
-  ggplot(election03, mapping = aes(x = election_date, y = vote_share, fill = as.factor(political_pos))) +
-  geom_bar(stat="identity", fill="#f68060", size = 0.1, width =100) + 
+  ggplot(election03, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
+  geom_bar(stat="identity", size = 5, width =500, position = "stack") + 
+  scale_fill_manual(values = c("grey30", "grey50", "grey80")) +
   scale_y_continuous(labels = scales::percent) +
   ylab("Share vote") +
   xlab("year") +
   theme_bw() +
   theme(legend.position = "bottom")
-
-
-
-
-
