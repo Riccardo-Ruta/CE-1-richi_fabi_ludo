@@ -33,6 +33,12 @@ apply(election03, 2, function(x) sum(is.na(x)))
 
 view(election03)
 
+#filter election date 
+election04 <- filter(election03,
+                     election_date == 
+)
+
+
 
 # Prova grafico Italia da sistemare
 election03 %>%
@@ -60,4 +66,17 @@ election03 %>%
   xlab("year") +
   theme_bw() +
   theme(legend.position = "bottom")
+
+#ALTRO GRAFICO
+election03 %>%
+  filter(country_name == "Italy") %>%
+  ggplot(election03, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
+  geom_bar(stat="identity", size = 5, width =350, position = "dodge") + 
+  scale_fill_manual(values = c("grey30", "grey50", "grey80")) +
+  scale_y_continuous() +
+  ylab("Percentage of share vote") +
+  xlab("year") +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
 
