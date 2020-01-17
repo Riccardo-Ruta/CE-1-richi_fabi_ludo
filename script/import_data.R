@@ -37,10 +37,8 @@ view(election03)
 # Prova grafico Italia da sistemare
 election03 %>%
   filter(country_name == "Italy") %>%
-  ggplot(election03, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
-  geom_bar(stat = "identity", position = "dodge", col = "black") + 
-  scale_fill_manual(values = c("green", "red", "blue"), 
-                    "Political position") +
+  ggplot(election03, mapping = aes(x = election_date, y = vote_share, fill = as.factor(political_pos))) +
+  geom_bar(stat="identity", fill="#f68060", size = 0.1, width =100) + 
   scale_y_continuous(labels = scales::percent) +
   ylab("Share vote") +
   xlab("year") +
@@ -49,17 +47,5 @@ election03 %>%
 
 
 
-#prova grafivo n.2
 
-election03 %>%
-  filter(country_name == "Italy") %>%
-  ggplot(election03, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
-  geom_bar(stat = "identity", width = 500, size = 10, position = "stack") + 
-  scale_fill_manual(values = c("green", "red", "blue"), 
-                    "Political position") +
-  scale_y_continuous(labels = scales::percent) +
-  ylab("Share vote") +
-  xlab("year") +
-  theme_bw() +
-  theme(legend.position = "bottom")
-*
+
