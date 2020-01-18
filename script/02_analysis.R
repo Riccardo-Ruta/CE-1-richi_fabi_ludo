@@ -6,9 +6,8 @@
 source(here::here("script","00_setup.R"))
 
 #load dataset--------------------------------------------------------------------------------
-load(here::here("recoded_data","election04.Rdata"))
 
-election04 <- import(here::here("recoded_data", "election04.Rdata"))
+election04 <- import(here::here("data/recoded_data", "election04.Rdata"))
 
 #Graph bar election_dateXvote_shareXpolitical_pos for each country-------------------------------
 ggplot(election04, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
