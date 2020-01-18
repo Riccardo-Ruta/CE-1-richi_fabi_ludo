@@ -42,8 +42,8 @@ election04 <- filter(election03,
 #Graph bar election_dateXvote_shareXpolitical_pos for each country
 ggplot(election04, mapping = aes(x = election_date, y = vote_share, fill = political_pos)) +
   geom_bar(stat="identity", size = 5, width =600, position = "dodge") + 
-  facet_wrap(~country_name)
-scale_fill_manual(values = c("darkgreen", "grey50", "steelblue")) +
+  facet_wrap(~country_name) +
+  scale_fill_manual(values = c("darkmagenta", "darkolivegreen3", "steelblue")) +
   scale_y_continuous() +
   ylab("Percentage of share vote") +
   xlab("year") +
