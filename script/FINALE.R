@@ -45,19 +45,11 @@ ggplot(election04, mapping = aes(x = election_date, y = vote_share, fill = polit
   facet_wrap(~country_name) +
   scale_fill_manual(values = c("darkmagenta", "darkolivegreen3", "steelblue")) +
   scale_y_continuous() +
-  ylab("Percentage of share vote") +
+  ylab("Percentage of vote share") +
   xlab("year") +
   theme_bw() +
   theme(legend.position = "bottom")
 
-#correlazione con la mean di vote_share
-election04 %>% 
-  group_by(left_right, country_name) %>%
-  summarize(vote_share=mean(vote_share)) %>%
-  ggplot(., aes(y=vote_share, x=left_right, group=factor(country_name))) +
-  geom_point(aes(col=factor(country_name))) +
-  labs(x="Left_right", y="Vote_share", title = "prova") +
-  theme_bw() 
 
 view(view_election)
 
@@ -68,7 +60,7 @@ election04 %>%
   group_by(left_right, country_name) %>%
   ggplot(., aes(y=vote_share, x=left_right, group=factor(country_name))) +
   geom_point(aes(col=factor(country_name))) +
-  labs(x="Left_right", y="Vote_share", title = "Correlation between vote share and political position in the 60's") +
+  labs(x="Left_right", y="Percentage of vote share", title = "Correlation between vote share and political position in the 60's") +
   theme_bw() 
 
 #VOTE_SHARExLEFT_RIGHT: 70's 
@@ -78,7 +70,7 @@ election04 %>%
   group_by(left_right, country_name) %>%
   ggplot(., aes(y=vote_share, x=left_right, group=factor(country_name))) +
   geom_point(aes(col=factor(country_name))) +
-  labs(x="Left_right", y="Vote_share", title = "Correlation between vote share and political position in the 70's") +
+  labs(x="Left_right", y="Percentage of vote share", title = "Correlation between vote share and political position in the 70's") +
   theme_bw() 
 
 #VOTE_SHARExLEFT_RIGHT: 80's
@@ -88,7 +80,7 @@ election04 %>%
   group_by(left_right, country_name) %>%
   ggplot(., aes(y=vote_share, x=left_right, group=factor(country_name))) +
   geom_point(aes(col=factor(country_name))) +
-  labs(x="Left_right", y="Vote_share", title = "Correlation between vote share and political position in the 80's") +
+  labs(x="Left_right", y="Percentage of vote share", title = "Correlation between vote share and political position in the 80's") +
   theme_bw() 
 
 #VOTE_SHARExLEFT_RIGHT: 90's 
@@ -98,7 +90,7 @@ election04 %>%
   group_by(left_right, country_name) %>%
   ggplot(., aes(y=vote_share, x=left_right, group=factor(country_name))) +
   geom_point(aes(col=factor(country_name))) +
-  labs(x="Left_right", y="Vote_share", title = "Correlation between vote share and political position in the 90's") +
+  labs(x="Left_right", y="Percentage of vote share", title = "Correlation between vote share and political position in the 90's") +
   theme_bw() 
 
 #VOTE_SHARExLEFT_RIGHT: 2000's
@@ -108,7 +100,7 @@ election04 %>%
   group_by(left_right, country_name) %>%
   ggplot(., aes(y=vote_share, x=left_right, group=factor(country_name))) +
   geom_point(aes(col=factor(country_name))) +
-  labs(x="Left_right", y="Vote_share", title = "Correlation between vote share and political position in the 2000's") +
+  labs(x="Left_right", y="Percentage of vote share", title = "Correlation between vote share and political position in the 2000's") +
   theme_bw() 
 
 #VOTE_SHARExLEFT_RIGHT: 2010's
@@ -118,5 +110,5 @@ election04 %>%
   group_by(left_right, country_name) %>%
   ggplot(., aes(y=vote_share, x=left_right, group=factor(country_name))) +
   geom_point(aes(col=factor(country_name))) +
-  labs(x="Left_right", y="Vote_share", title = "Correlation between vote share and political position in the 2010's") +
+  labs(x="Left_right", y="Percentage of vote share", title = "Correlation between vote share and political position in the 2010's") +
   theme_bw() 
