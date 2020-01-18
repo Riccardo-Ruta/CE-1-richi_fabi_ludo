@@ -18,11 +18,9 @@ here::here("")
 # Importing data ---------------------------------------------------------------------------------------------
 
 view_election <- read_csv("data/original_data/view_election.csv")
-View(view_election)
 
 # Selecting variables----------------------------------------------------------------------------------------------
 election00 <- select(view_election, country_name, election_date, vote_share, left_right, election_type, party_name)
-view(election00)
 
 ##Filter variable country and variable election_type---------------------------------------------------------------
 election01 <- filter(
@@ -30,7 +28,6 @@ election01 <- filter(
   country_name %in% c("Italy", "Germany", "Australia", "Japan"),
   election_type == "parliament") 
 
-view(election01)
 
 #Recode variable political position-----------------------------------------------------------------------------
 election02 <- mutate(
@@ -39,15 +36,13 @@ election02 <- mutate(
                          ifelse(election01$left_right <= 6.6666, "center",
                                 "right"))
 )
-view(election02)
+
 
 #drop missing values-------------------------------------------------------------------------------
 election03 <- na.omit(election02)
 dim(election03)
 
 apply(election03, 2, function(x) sum(is.na(x)))
-
-view(election03)
 
 #Filter election date----------------------------------------------------------------------------
 election04 <- filter(election03,

@@ -30,7 +30,7 @@ election04 %>%
   labs(x="Left_right", y="Vote_share", title = "prova") +
   theme_bw() 
 
-view(view_election)
+
 
 #VOTE_SHAREXLEFT_RIGHT: 60's------------------------------------------------------------------------
 election04 %>% 
