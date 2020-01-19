@@ -13,10 +13,12 @@ Our project is divided in 4 folders:
     - *"Recoded_data*: is the dataset with the variables we selected for our scope; 
     
 2. **SCRIPT**: this folder contains three script that we used to analyze our data and gather the information we needed to try to answer to our research question
-   - 
-   -
-   -
+   - 00_setup.R;
+   - 01_recoding.R;
+   - 02_analysis.R; 
+   
 3. **DOCS**: this folder contains the *final report and the graphs we made*;
+
 4. **JUNK**: this folder contains all the files we used to run our analysis and that we no longer need. 
 
 
