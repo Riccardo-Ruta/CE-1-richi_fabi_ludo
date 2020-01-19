@@ -59,7 +59,7 @@ election04 %>%
   filter(election_date > "1963-04-28", 
          election_date <= "1969-12-27") %>%
   group_by(left_right, country_name) %>%
-  ggplot(., aes(y=vote_share, x=left_right, group=factor(country_name))) +
+  ggplot(., aes(y=vote_share, x=left_right, group= factor(country_name))) +
   geom_point(aes(col=factor(country_name))) +
   labs(x="Political position", y="Percentage of vote share", title = "Correlation between vote share and political position in the 60's") +
   theme_bw() 
