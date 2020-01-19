@@ -45,7 +45,9 @@ The plot is created for each country and allows us to compare them. This way, it
 To put our two hypothesis to the test we decided to select four countries, that are Italy, Germany, Australia and Japan, and first check for a correlation between the political position of the parties and their share of votes; second we compared the variation of political parties' share of votes in each country according to their political position.
   ##### Association between political position and share of votes over time
   
-![Figure 1](/docs/fig_1.png)                          ![Figure 2](/docs/fig_2.png)
+![Figure 1](/docs/fig_1.png)                         
+
+![Figure 2](/docs/fig_2.png)
 
 ![Figure 3](/docs/fig_3.png)
 
@@ -53,7 +55,9 @@ To put our two hypothesis to the test we decided to select four countries, that 
 
 ![Figure 5](/docs/fig_5.png) 
 
-![Figure 6](/docs/fig_6.png) 
+![Figure 6](/docs/fig_6.png)
+
+At first glance we can see that there's not a clear association between the political position of parties and the share of votes gained over time. 
   
   ##### Percentages of votes for political position in each country over time
 
