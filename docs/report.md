@@ -44,6 +44,6 @@ The plot is created for each country and allows us to compare them. This way, it
 #### Results 
 To put our two hypothesis to the test we decided to select four countries, that are Italy, Germany, Australia and Japan, and compare the variation of political parties' share of votes in each one of them, according to their political position.
 
-![Figure 1](docs/Figure 1.png)
+![Figure 1](docs/Figure1.png)
 
 The first thing that we can see from the graph in Figure 1 is that there are differences both among countries and over time. In Australia and Germany, for example, there are strong center parties that gained almost 40%, in same cases, and that held their position over time. On the contrary, in Japan, the center gained very low percentages of votes until the 2000's as opposite from Italy where the center had a strong consensus until the 90's. Moreover we can see that, in each country, the difference among each political alignment varies. In Australia for example, the main parties belong to the center and the right-wing. Whereas in Germany the center has highest scores. In Japan the right-wing has almost every time the highest values and there's an evolution of the center scores. Italy's political system changed after 1992 and, as we can see from the graph, that's when both the right-wing and the left- wing became more competitive. 
