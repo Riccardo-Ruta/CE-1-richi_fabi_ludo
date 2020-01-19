@@ -43,6 +43,7 @@ The plot is created for each country and allows us to compare them. This way, it
 
 #### Results 
 To put our two hypothesis to the test we decided to select four countries, that are Italy, Germany, Australia and Japan, and compare the variation of political parties' share of votes in each one of them, according to their political position.
+##### Percentages of votes for political position in each country over time
 
 ![Figure 1](/docs/Figure_1.png)
 
