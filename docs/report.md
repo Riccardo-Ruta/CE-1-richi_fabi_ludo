@@ -42,9 +42,19 @@ The plot is created for each country and allows us to compare them. This way, it
        
 
 #### Results 
-To put our two hypothesis to the test we decided to select four countries, that are Italy, Germany, Australia and Japan, and compare the variation of political parties' share of votes in each one of them, according to their political position.
-   ##### Percentages of votes for political position in each country over time
+To put our two hypothesis to the test we decided to select four countries, that are Italy, Germany, Australia and Japan, and first check for a correlation between the political position of the parties and their share of votes; second we compared the variation of political parties' share of votes in each country according to their political position.
+  ##### Association between political position and share of votes over time
+  
+  ![Figure 1](/docs/corr 60s.png)                                ![Figure 2](/docs/corr 70s.png)
 
-![Figure 1](/docs/Figure_1.png)
+  ![Figure 3](/docs/corr 80s.png)                                ![Figure 4](/docs/corr 90s.png)
 
-The first thing that we can see from the graph in Figure 1 is that there are differences both among countries and over time. In Australia and Germany, for example, there are strong center parties that gained almost 40%, in same cases, and that held their position over time. On the contrary, in Japan, the center gained very low percentages of votes until the 2000's as opposite from Italy where the center had a strong consensus until the 90's. Moreover we can see that, in each country, the difference among each political alignment varies. In Australia for example, the main parties belong to the center and the right-wing. Whereas in Germany the center has highest scores. In Japan the right-wing has almost every time the highest values and there's an evolution of the center scores. Italy's political system changed after 1992 and, as we can see from the graph, that's when both the right-wing and the left- wing became more competitive. 
+  ![Figure 5](/docs/corr 2000s.png)                              ![Figure 6](/docs/corr 2010s.png) 
+  
+  ##### Percentages of votes for political position in each country over time
+
+![Figure 7](/docs/Figure_1.png)
+
+The first thing that we can see from the graph in Figure 7 is that there are differences both among countries and over time. In Australia and Germany, for example, there are strong center parties that gained almost 40%, in same cases, and that held their position over time. On the contrary, in Japan, the center gained very low percentages of votes until the 2000's as opposite from Italy where the center had a strong consensus until the 90's. Moreover we can see that, in each country, the difference among each political alignment varies. In Australia for example, the main parties belong to the center and the right-wing. Whereas in Germany the center has highest scores. In Japan the right-wing has almost every time the highest values and there's an evolution of the center scores. Italy's political system changed after 1992 and, as we can see from the graph, that's when both the right-wing and the left- wing became more competitive. 
+
+
