@@ -57,7 +57,7 @@ To put our two hypothesis to the test we decided to select four countries, that 
 
 ![Figure 6](/docs/fig_6.png)
 
-At first glance we can see that there's not a clear association between the political position of parties and the share of votes gained over time. 
+At first glance we can see that, as we expected in our first hypothesis, there's not a clear association between the political position of parties and the share of votes gained over time. In fact, we should consider all the aspects that influence the results of the elections and the context in which they are held. But still, we might want to look for the variation of the vote share over time in the countries we selected, according to the political positions.
   
   ##### Percentages of votes for political position in each country over time
 
