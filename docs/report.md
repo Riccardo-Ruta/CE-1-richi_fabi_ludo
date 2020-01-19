@@ -5,8 +5,8 @@
 The starting point of this research has to be found in the *classic Median voter's theorem* and in a recent contribution given by Abou-Chadi and Orlowski. Them both are theories which state the political parties's tendency at positioning themselves close to the center, but differ among themseleves because they refer to different political system: the former refer to the majority rule voting system and the second to the competitive one. 
 Starting from these analyses, this research aims to inquire whether or not the centrist political parties are more successful than others. 
 To answer this question we drawed two hypotheses: 
- - The first hypothesis is that the success of central parties depends on the cultural and historical context of each country;
- - The second hypothesis is that there is no correlation between an high share of votes and the political position, due to the variability of the factors that can influence this relationship and to the differences among the meaning of the "left-right" dimension in each country.
+ - The first hypothesis is that there is no correlation between an high share of votes and the political position, due to the variability of the factors that can influence this relationship and to the differences among the meaning of the "left-right" dimension in each country;
+ - The second hypothesis is that the success of central parties depends on the cultural and historical context of each country
  
  #### Methods 
  ##### Pre-processing phase 
@@ -29,17 +29,16 @@ Moreover, we ***recoded*** the variable "Left_right" in order to transform it fr
 
 ##### Analysis 
 The analysis was conducted in *two different levels*:
-1. The first level is the most intuitive. Using *ggplot* we drafted a plot that displays:
-    - the difference in vote share for each political position (left; right; center);
-    - how it changed over time. 
-The plot is created for each country and allows us to compare them. This way, it is possible to test our first hypothesis that states the importance of the historical and cultural context of each country in determining which political position is more successful; 
-2. The second level is more technical: it aims to show the correlation between the variables "Vote_share" and "Left_right".
+1. The first level is more technical: it aims to show the correlation between the variables "Vote_share" and "Left_right".
    - We used the variable "Left_right" insted of "Political_pos" because it allows us to look at the results in a more precise way; 
    - Also in this case we chose plot to present our results, considering it the best way to do that. We created six graphs that:
        - Refer to different temporal periods: "60's", "70's", "80's", "90's", "2000's", "2010's";
        - display how the correlation varies during the years;
        - Contain the values of all the countries but with different colors.
-       
+2. The second level is the most intuitive. Using *ggplot* we drafted a plot that displays:
+    - the difference in vote share for each political position (left; right; center);
+    - how it changed over time. 
+The plot is created for each country and allows us to compare them. This way, it is possible to test our first hypothesis that states the importance of the historical and cultural context of each country in determining which political position is more successful;     
 
 #### Results 
 To put our two hypothesis to the test we decided to select four countries, that are Italy, Germany, Australia and Japan, and check for a correlation between the political position of the parties and their share of votes; We then compared the variation of political parties' share of votes in each country according to their political position.
